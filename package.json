@@ -26,9 +26,7 @@
     "lodash": "^3.10.1",
     "trailpack": "0.0.15"
   },
-  "eslintConfig": {
-    "extends": "trails"
-  },
+  
   "devDependencies": {
     "eslint": "^1.10.3",
     "eslint-config-trails": "^1.0.1",

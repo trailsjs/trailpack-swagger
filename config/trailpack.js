@@ -11,4 +11,9 @@ module.exports = {
    */
   provides: { },
 
+  lifecycle: {
+    initialize: [
+      'trailpack:router:initialized'
+    ]
+  }
 }
