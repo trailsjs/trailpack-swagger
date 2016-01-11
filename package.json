@@ -24,9 +24,9 @@
   "homepage": "https://github.com/trailsjs/trailpack-swagger#readme",
   "dependencies": {
     "lodash": "^3.10.1",
+    "swagger-ui": "^2.1.4",
     "trailpack": "0.0.15"
   },
-  
   "devDependencies": {
     "eslint": "^1.10.3",
     "eslint-config-trails": "^1.0.1",

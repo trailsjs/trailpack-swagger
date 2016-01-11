@@ -15,6 +15,9 @@ module.exports = class Swagger extends Trailpack {
 
   initialize () {
     console.log(this.app.routes)
+    console.log('=========')
+    console.log(this.app.config.routes)
+    return Promise.resolve()
   }
 
   constructor (app) {

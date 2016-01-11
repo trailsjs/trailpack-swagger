@@ -3,11 +3,12 @@
 module.exports = {
 
   doc (request, reply) {
-    reply(this.api.swagger.doc || {})
+    return reply(this.api.services.SwaggerService.getDoc())
+      .header('Access-Control-Allow-Origin', '*')
   },
 
   ui (request, reply) {
     console.log(request.info)
-    reply.redirect('');
+    reply(this.config.swagger.ui.url + '?url=' + request.info.host + '/swagger/doc')
   }
 }
