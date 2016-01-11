@@ -3,6 +3,7 @@
 module.exports = {
 
   doc (request, reply) {
+    console.log(this.api.services.SwaggerService.getDoc())
     return reply(this.api.services.SwaggerService.getDoc())
       .header('Access-Control-Allow-Origin', '*')
   },

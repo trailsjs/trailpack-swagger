@@ -31,6 +31,8 @@ const SwaggerService = module.exports = {
         return route.path + route.method //+ JSON.stringify(route.keys)
       })
       .reject({ path: '/*' })
+      .reject({ path: '/swagger/doc' })
+      .reject({ path: '/swagger/ui' })
       .reject({ path: '/__getcookie' })
       .reject({ path: '/csrfToken' })
       .reject({ path: '/csrftoken' })
@@ -90,7 +92,6 @@ const SwaggerService = module.exports = {
    * @return {Object}
    */
   getDoc () {
-    console.log(SwaggerService.getPaths())
     const config = this.config.swagger
     return {
       swagger: '2.0',
