@@ -1,0 +1,35 @@
+{
+  "name": "trailpack-swagger",
+  "version": "0.0.1",
+  "description": "Trailpack Swagger",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trailsjs/trailpack-swagger.git"
+  },
+  "keywords": [
+    "trailsjs",
+    "trails",
+    "swagger",
+    "api"
+  ],
+  "author": "Konstantin Zolotarev <konstantin.zolotarev@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trailsjs/trailpack-swagger/issues"
+  },
+  "homepage": "https://github.com/trailsjs/trailpack-swagger#readme",
+  "dependencies": {
+    "lodash": "^3.10.1",
+    "swagger-ui": "^2.1.4",
+    "trailpack": "0.0.15"
+  },
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "eslint-config-trails": "^1.0.1",
+    "mocha": "^2.3.4"
+  }
+}
