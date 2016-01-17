@@ -1,0 +1,7 @@
+./test/index.js
+--reporter spec
+--recursive
+--check-leaks
+--full-trace
+--slow 50
+--no-exit

@@ -1,6 +1,5 @@
 'use strict'
 
-const _ = require('lodash')
 const Trailpack = require('trailpack')
 
 /**
@@ -13,12 +12,12 @@ const Trailpack = require('trailpack')
  */
 module.exports = class Swagger extends Trailpack {
 
-  initialize () {
-    
+  initialize() {
+    this.app.services.SwaggerService.getDoc()
     return Promise.resolve()
   }
 
-  constructor (app) {
+  constructor(app) {
     super(app, {
       config: require('./config'),
       api: require('./api'),

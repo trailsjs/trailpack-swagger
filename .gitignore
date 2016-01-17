@@ -1,3 +1,5 @@
+/.idea
+/api
 # Logs
 logs
 *.log

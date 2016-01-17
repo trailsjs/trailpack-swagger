@@ -1,0 +1,4 @@
+{
+  "extends": "trails/test",
+  "ignore": "node_modules"
+}
