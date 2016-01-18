@@ -1,15 +1,27 @@
 'use strict'
 
-module.exports = {
+const Controller = require('trails-controller')
 
+module.exports = class SwaggerController extends Controller{
+
+  /* express version
+  doc (req, res) {
+    this.log.info(this.app.services.SwaggerService.getDoc())
+    return res.json(this.app.services.SwaggerService.getDoc())
+  }
+
+  ui (req, res) {
+    this.log.info(req.info)
+    res.redirect(this.config.swagger.ui.url + '?url=' + request.info.host + '/swagger/doc')
+  }*/
   doc (request, reply) {
-    console.log(this.api.services.SwaggerService.getDoc())
-    return reply(this.api.services.SwaggerService.getDoc())
+    this.log.info(this.app.services.SwaggerService.getDoc())
+    return reply(this.app.services.SwaggerService.getDoc())
       .header('Access-Control-Allow-Origin', '*')
-  },
+  }
 
   ui (request, reply) {
-    console.log(request.info)
+    this.log.info(request.info)
     reply(this.config.swagger.ui.url + '?url=' + request.info.host + '/swagger/doc')
   }
 }
