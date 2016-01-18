@@ -22,7 +22,7 @@ const App = {
       }
     },
     footprints: {
-      controllers: true,
+      controllers: false,
       models: {
 
         actions: {
