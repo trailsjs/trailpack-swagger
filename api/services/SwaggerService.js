@@ -139,7 +139,7 @@ module.exports = class SwaggerService extends Service {
           in: 'path',
           name: key.replace(/{(\w+)\??}/g, '$1'),
           required: key.indexOf('?') == -1,
-          type: "string"
+          type: 'string'
         })
       })
     }
