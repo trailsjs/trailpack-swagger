@@ -9,7 +9,7 @@ module.exports = {
   /**
    * Define the API resources are provided by this trailpack
    */
-  provides: { },
+  provides: {config: ['routes']},
 
   lifecycle: {
     initialize: [

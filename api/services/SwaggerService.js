@@ -32,6 +32,11 @@ module.exports = class SwaggerService extends Service {
     let routes = []
 
     this.app.routes.forEach(item => {
+
+      if (!_.isArray(item.method) && (item.method == '*' || item.method.toLowerCase() == 'all')) {
+        item.method = _.keys(methodMap)
+      }
+
       if (_.isArray(item.method) && item.method.length > 1) {
         item.method.forEach(methodName => {
           const newRoute = _.cloneDeep(item)
@@ -76,14 +81,15 @@ module.exports = class SwaggerService extends Service {
       .unique(route => {
         return route.path + route.method //+ JSON.stringify(route.keys)
       })
-      .reject({path: '/swagger/doc'})
+      .reject((o) => {
+        return /\/swagger\//g.test(o.path)
+      })
       .reject((o) => {
         return o.path.indexOf('{model}') != -1
       })
       .reject((o) => {
         return o.path.indexOf('{parentModel}') != -1
       })
-      .reject({path: '/swagger/ui'})
       .reject({path: '/__getcookie'})
       .reject({path: '/csrfToken'})
       .reject({path: '/csrftoken'})
@@ -92,6 +98,7 @@ module.exports = class SwaggerService extends Service {
 
     pathGroups = _.reduce(pathGroups, function (result, routes, path) {
       path = path.replace(/:(\w+)\??/g, '{$1}')
+      path = path.replace(/{(\w+)\??}/g, '{$1}')//FIXME: swagger don't allow optionnal parameters for now
       if (result[path])
         result[path] = _.union(result[path], routes)
       else
@@ -124,6 +131,19 @@ module.exports = class SwaggerService extends Service {
     methodGroup.tags = methodGroup.tags || []
     const parameters = []
     let responses = {}
+
+    if (methodGroup.path.indexOf('}') != -1) {
+      let params = methodGroup.path.match(/{(\w+)\??}/g)
+      params.forEach(key => {
+        parameters.push({
+          in: 'path',
+          name: key.replace(/{(\w+)\??}/g, '$1'),
+          required: key.indexOf('?') == -1,
+          type: "string"
+        })
+      })
+    }
+
     if (methodGroup.tags.length > 0) {
       responses = {
         400: {
@@ -171,8 +191,13 @@ module.exports = class SwaggerService extends Service {
   getTags() {
     const tags = []
     _.each(this.app.api.models, (model, name) => {
+      let description = ''
+      if (model.description && model.description().description) {
+        description = model.description().description
+      }
       tags.push({
-        name: _.capitalize(name.toLowerCase())
+        name: _.capitalize(name.toLowerCase()),
+        description: description
       })
     })
     return tags
@@ -181,10 +206,10 @@ module.exports = class SwaggerService extends Service {
   getDefinitions() {
     const definitions = {}
     _.each(this.app.api.models, (model, name) => {
-      definitions[_.capitalize(name.toLowerCase())] = {
-        type: 'object'
-        //properties: model.schema()//FIXME: need to filter and format schema
+      if (!model.description) {
+        this.log.warn(name + ' doesn\'t have a description method to describe it')
       }
+      definitions[_.capitalize(name.toLowerCase())] = model.description ? model.description() : {}
     })
     return definitions
   }
