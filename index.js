@@ -13,7 +13,6 @@ const Trailpack = require('trailpack')
 module.exports = class Swagger extends Trailpack {
 
   initialize() {
-    this.app.services.SwaggerService.getDoc()
     return Promise.resolve()
   }
 

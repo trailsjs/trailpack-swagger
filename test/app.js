@@ -1,3 +1,4 @@
+'use strict'
 const _ = require('lodash')
 const smokesignals = require('smokesignals')
 
@@ -22,7 +23,7 @@ const App = {
       }
     },
     footprints: {
-      controllers: true,
+      controllers: false,
       models: {
 
         actions: {

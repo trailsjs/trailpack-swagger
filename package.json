@@ -26,9 +26,8 @@
     "extends": "trails"
   },
   "dependencies": {
-    "lodash": "^3.10.1",
-    "swagger-ui": "^2.1.4",
-    "trailpack": "0.0.15",
+    "lodash": "^4.0.0",
+    "trailpack": "0.0.21",
     "trails-controller": "^1.0.0-alpha-1",
     "trails-service": "^1.0.0-alpha-1"
   },
@@ -38,13 +37,13 @@
     "mocha": "^2.3.4",
     "smokesignals": "0.0.8",
     "supertest": "^1.1.0",
-    "trailpack-core": "1.0.0-alpha-1",
-    "trailpack-hapi": "1.0.0-alpha-4",
-    "trailpack-router": "0.0.19",
-    "trailpack-waterline": "1.0.0-alpha-2",
-    "trails": "0.0.24",
+    "trailpack-core": "1.0.0-alpha-3",
+    "trailpack-hapi": "1.0.0-alpha-12",
+    "trailpack-router": "1.0.0-alpha-4",
+    "trailpack-waterline": "1.0.0-alpha-6",
+    "trails": "1.0.0-alpha-4",
     "trails-model": "^1.0.0-alpha-1",
-    "trails-service": "^1.0.0-alpha-1",
+    "trails-policy": "^1.0.0",
     "waterline-sqlite3": "^1.0.0"
   }
 }
