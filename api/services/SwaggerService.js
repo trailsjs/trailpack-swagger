@@ -78,7 +78,7 @@ module.exports = class SwaggerService extends Service {
     let pathGroups = _.chain(routes)
       .values()
       .flatten()
-      .unique(route => {
+      .uniq(route => {
         return route.path + route.method //+ JSON.stringify(route.keys)
       })
       .reject((o) => {
@@ -114,7 +114,7 @@ module.exports = class SwaggerService extends Service {
 
   getPathItem(pathGroup) {
     const methodGroups = _.chain(pathGroup)
-      .indexBy('method')
+      .keyBy('method')
       .pick([
         'get', 'post', 'put', 'head', 'options', 'patch', 'delete'
       ])
@@ -133,7 +133,7 @@ module.exports = class SwaggerService extends Service {
     let responses = {}
 
     if (methodGroup.path.indexOf('}') != -1) {
-      let params = methodGroup.path.match(/{(\w+)\??}/g)
+      const params = methodGroup.path.match(/{(\w+)\??}/g)
       params.forEach(key => {
         parameters.push({
           in: 'path',

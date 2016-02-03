@@ -14,7 +14,8 @@
     "trailsjs",
     "trails",
     "swagger",
-    "api"
+    "api",
+    "rest"
   ],
   "author": "Konstantin Zolotarev <konstantin.zolotarev@gmail.com>",
   "license": "MIT",
@@ -26,14 +27,14 @@
     "extends": "trails"
   },
   "dependencies": {
-    "lodash": "^4.1.0",
-    "trailpack": "^1.0.0-alpha-2",
+    "lodash": "^4.2.0",
+    "trailpack": "^1.0.0-beta-2",
     "trails-controller": "^1.0.0-alpha-1",
     "trails-service": "^1.0.0-alpha-1"
   },
   "devDependencies": {
-    "eslint": "2.0.0-alpha-2",
-    "eslint-config-trails": "^1.0.1",
+    "eslint": "^2.0.0-rc.0",
+    "eslint-config-trails": "^1.0.3",
     "mocha": "^2.3.4",
     "smokesignals": "^1.0.2",
     "supertest": "^1.1.0",
