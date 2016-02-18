@@ -28,23 +28,23 @@
   },
   "dependencies": {
     "lodash": "^4.2.0",
-    "trailpack": "^1.0.0-beta-2",
-    "trails-controller": "^1.0.0-alpha-1",
-    "trails-service": "^1.0.0-alpha-1"
+    "trailpack": "^1.0.0-beta-3",
+    "trails-controller": "^1.0.0-beta-2",
+    "trails-service": "^1.0.0-beta-2"
   },
   "devDependencies": {
-    "eslint": "^2.0.0-rc.0",
-    "eslint-config-trails": "^1.0.3",
-    "mocha": "^2.3.4",
+    "eslint": "^2.1.0",
+    "eslint-config-trails": "^1.0.4",
+    "mocha": "^2.4.5",
     "smokesignals": "^1.0.2",
     "supertest": "^1.1.0",
-    "trailpack-core": "^1.0.0-alpha-3",
-    "trailpack-hapi": "1.0.0-alpha-12",
-    "trailpack-router": "1.0.0-alpha-4",
+    "trailpack-core": "^1.0.0-alpha-4",
+    "trailpack-hapi": "1.0.0-beta-2",
+    "trailpack-router": "1.0.0-beta-4",
     "trailpack-waterline": "1.0.0-alpha-6",
-    "trails": "^1.0.0-alpha-8",
-    "trails-model": "1.0.0-alpha-1",
-    "trails-policy": "^1.0.0",
+    "trails": "^1.0.0-beta-1",
+    "trails-model": "1.0.0-beta-2",
+    "trails-policy": "^1.0.1",
     "waterline-sqlite3": "^1.0.0"
   }
 }
