@@ -40,7 +40,7 @@
     "supertest": "^1.2.0",
     "trailpack-core": "^1.0.0-beta-6",
     "trailpack-hapi": "1.0.0-beta-2",
-    "trailpack-router": "1.0.0-beta-4"
+    "trailpack-router": "1.0.0-beta-4",
     "trails": "^1.0.0",
     "trails-model": "1.0.0-beta-2",
     "trails-policy": "^1.0.2"
