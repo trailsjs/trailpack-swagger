@@ -72,7 +72,7 @@ module.exports = class SwaggerService extends Service {
       if (_.isArray(route.method))
         route.method = _.map(route.method, method => method.toLowerCase())
 
-      return route;
+      return route
     })
 
     let pathGroups = _.chain(routes)

@@ -27,24 +27,22 @@
     "extends": "trails"
   },
   "dependencies": {
-    "lodash": "^4.2.0",
-    "trailpack": "^1.0.0-beta-3",
+    "lodash": "^4.12.0",
+    "trailpack": "^1.0.2",
     "trails-controller": "^1.0.0-beta-2",
     "trails-service": "^1.0.0-beta-2"
   },
   "devDependencies": {
-    "eslint": "^2.1.0",
-    "eslint-config-trails": "^1.0.4",
+    "eslint": "^2.10.1",
+    "eslint-config-trails": "^1.0.6",
     "mocha": "^2.4.5",
-    "smokesignals": "^1.0.2",
-    "supertest": "^1.1.0",
-    "trailpack-core": "^1.0.0-alpha-4",
+    "smokesignals": "^1.2.2",
+    "supertest": "^1.2.0",
+    "trailpack-core": "^1.0.0-beta-6",
     "trailpack-hapi": "1.0.0-beta-2",
-    "trailpack-router": "1.0.0-beta-4",
-    "trailpack-waterline": "1.0.0-alpha-6",
-    "trails": "^1.0.0-beta-1",
+    "trailpack-router": "1.0.0-beta-4"
+    "trails": "^1.0.0",
     "trails-model": "1.0.0-beta-2",
-    "trails-policy": "^1.0.1",
-    "waterline-sqlite3": "^1.0.0"
+    "trails-policy": "^1.0.2"
   }
 }
