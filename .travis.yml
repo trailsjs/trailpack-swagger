@@ -1,8 +1,8 @@
 language: node_js
 node_js:
-- 4
-- 5
-- 6
+  - 4
+  - 5
+  - 6
 
 notifications:
   email: false
@@ -14,11 +14,10 @@ notifications:
 
 deploy:
   provider: npm
-  email: hello@trailsjs.org
+  email: hello@trailsjs.io
   api_key:
-    secure: TODO
+    secure: pZrKKHLAnpsgLvsrlkFfEFCsOu/xEtRagrnJAdHn6XoaL500SIxySU8vh/Vzhdbs1GFZKtmnXKdIkzKfItZZ3QZmSWzdBjUcQAR06dAaaB1Gx+VoPSYlTszGroSgFEX46fw1UFJEwi8AfSpHLXRIvIELNSxM6K+rrmS1Yu3t6AMfI0qWb40BG6ZXE6VNIuscrjfxsePr437RuE0bjuEOEpe9JykWDuWFq+neoCm6sIenjUEcGNp+xZo5O0NJmdUp5A8ASXGzbH7hNcKG3CIDYhng/zPVT+dX7erWpK7TT15Noccxdv7zB/kfNs1quSKFZl1WSpKhWqr4chpwNSmjEaLz2EsCjm5UNe7Yfdl54PCw058mXCJcswfmxIpls52thn647BEiafpaSfmF8Cy3thA/YrVabeAHxWFosKf7fDXF5RozAz8XILPr6GR5Xra0fEk+znctlA+aqz3/AwIMqM8YFWbU1OY1qKQ8LYVyVpP0m5AMbQtk6Nqsu1JNSjCSGGbbLtqs2UQdmwuNZplf4m4MYqZcXrD/EB30zcX9cnoHpQO01eb+x9lw4FnQVNQZcGIZoQtmnS2tpuXtXl6NIGueDLwUxZEWSfIAF1FEdDTmgHWg7bwsI9pzl+W2OiCFvGqeNVn2LukBI1Ps2w/jBpqwFRvZSRSZs5R+JuSB4Uw=
   on:
     tags: true
     repo: trailsjs/trailpack-swagger
-    all_branches: true
     node: 6
