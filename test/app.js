@@ -11,17 +11,6 @@ const App = {
   },
   api: Api,
   config: {
-    database: {
-      stores: {
-        sqlitedev: {
-          adapter: require('waterline-sqlite3')
-        }
-      },
-      models: {
-        defaultStore: 'sqlitedev',
-        migrate: 'drop'
-      }
-    },
     footprints: {
       controllers: false,
       models: {
@@ -44,17 +33,10 @@ const App = {
       },
       prefix: ''
     },
-    i18n: {
-      lng: 'en',
-      resources: {
-        en: {}
-      }
-    },
     main: {
       packs: [
         smokesignals.Trailpack,
         require('trailpack-core'),
-        require('trailpack-waterline'),
         require('trailpack-router'),
         require('trailpack-hapi'),
         require('../') // trailpack-swagger

@@ -14,7 +14,8 @@
     "trailsjs",
     "trails",
     "swagger",
-    "api"
+    "api",
+    "rest"
   ],
   "author": "Konstantin Zolotarev <konstantin.zolotarev@gmail.com>",
   "license": "MIT",
@@ -26,24 +27,22 @@
     "extends": "trails"
   },
   "dependencies": {
-    "lodash": "^4.1.0",
-    "trailpack": "^1.0.0-alpha-2",
-    "trails-controller": "^1.0.0-alpha-1",
-    "trails-service": "^1.0.0-alpha-1"
+    "lodash": "^4.12.0",
+    "trailpack": "^1.0.2",
+    "trails-controller": "^1.0.0-beta-2",
+    "trails-service": "^1.0.0-beta-2"
   },
   "devDependencies": {
-    "eslint": "2.0.0-alpha-2",
-    "eslint-config-trails": "^1.0.1",
-    "mocha": "^2.3.4",
-    "smokesignals": "^1.0.2",
-    "supertest": "^1.1.0",
-    "trailpack-core": "^1.0.0-alpha-3",
-    "trailpack-hapi": "1.0.0-alpha-12",
-    "trailpack-router": "1.0.0-alpha-4",
-    "trailpack-waterline": "1.0.0-alpha-6",
-    "trails": "^1.0.0-alpha-8",
-    "trails-model": "1.0.0-alpha-1",
-    "trails-policy": "^1.0.0",
-    "waterline-sqlite3": "^1.0.0"
+    "eslint": "^2.10.2",
+    "eslint-config-trails": "^1.0.7",
+    "mocha": "^2.5.2",
+    "smokesignals": "^1.2.2",
+    "supertest": "^1.2.0",
+    "trailpack-core": "^1.0.0",
+    "trailpack-hapi": "^1.0.1",
+    "trailpack-router": "^1.0.2",
+    "trails": "^1.0.0",
+    "trails-model": "1.0.0-beta-2",
+    "trails-policy": "^1.0.2"
   }
 }
