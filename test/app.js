@@ -35,8 +35,6 @@ const App = {
     },
     main: {
       packs: [
-        smokesignals.Trailpack,
-        require('trailpack-core'),
         require('trailpack-router'),
         require('trailpack-hapi'),
         require('../') // trailpack-swagger
